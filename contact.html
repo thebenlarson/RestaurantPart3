@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
+        <link rel="stylesheet" href="styles/restaurantStyles.css">
+        <style>
+            .red{color: red;}
+        </style>
+
+        <title>Don Juan's</title>
+    </head>
+
+    <body>
+        <main style="background-color: lightgoldenrodyellow">
+            <div class="base-background">
+                <header class="jumbotron base-background">
+                    <h1 class="invert text-center">Don Juan's</h1>
+                    <h2 class="invert">BIG NEWS: Don Juan's is opening a NEW LOCATION at 5678 Main St. Little Mexico, Texas, 12345!</h2>
+                    <h2 class="invert">Stop by Friday for Half off everything on the menu!</h2>
+                </header>
+
+                <hr/>
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><span class="oi oi-home"></span> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <hr/>
+            </div>
+                <section class="container" style="min-height: 700px;">
+                    <h3>Contact Us</h3>
+                    <hr style="background-color: black" />
+                    <form name="contact">
+                        <div class="form-group has-error">
+                            <label for="name"><b>Name: </b></label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><b>Email: </b></label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone: </label>
+                            <input type="text" class="form-control" id="phone">
+                        </div>
+                        <div class="form-group">
+                            <label>Reason for Inquiry: </label>
+                            <select class="form-control">
+                                <option>Catering</option>
+                                <option>Private Party</option>
+                                <option>Feedback</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <label>Have you been to the restaurant? </label>
+                            </div>
+                            <div class="col-md-8">
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" value="No" name="radio" checked>No
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" value="Yes" name="radio">Yes
+                                        </label>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <label id="daysLabel">Best days to contact you: </label>
+                                <label id="failedLabel" class="red" style="display: none;">Please Select at least one</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" name="days" class="form-check-input" value="monday">M
+                                    </label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" name="days"  class="form-check-input" value="tuesday">T
+                                    </label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" name="days"  class="form-check-input" value="wednesday">W
+                                    </label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" name="days" class="form-check-input" value="thursday">Th
+                                    </label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" name="days" class="form-check-input" value="friday">F
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <a class="btn btn-primary" onclick="validateForm()" style="color: white">Send Request</a>
+                        </div>
+                    </form>
+                </section>
+                
+
+
+                <footer class="page-footer font-small blue pt-4" style="background-color: black">
+                    <div class="container-fluid text-center">
+                        <div class="row">
+                            <div class="col-md-3"></div>
+
+                            <div class="col-md-6">
+                            <h5 class="invert">1234 Main St. Little Mexico, Texas, 12345</h5>
+                            <h5 class="invert">(111) - 111 - 1111</h5>
+                            </div>
+
+                            <div class="col-md-3"></div>              
+                        </div>                      
+                    </div>                      
+                </footer>
+        </main>
+        
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script>
+            let form = document.forms["contact"];
+            let name = form[0];
+            let email = form[1];
+            let phone = form[2];
+            let monday = form[6];
+            let tuesday = form[7];
+            let wednesday = form[8];
+            let thursday = form[9];
+            let friday = form[10];
+            let label = document.getElementById("daysLabel");
+            let fail = document.getElementById("failedLabel");
+            let valid = true;
+
+            function validateForm(){
+                resetForm();
+
+                //Validate Fields
+                validateText(name);
+                validateText(email);
+                validatePhone();
+                validateCheckboxes();
+                
+                //Alert the user of the status of their form
+                if (!valid){
+                    alert("One or more fields have an error. Please try again.");
+                } else {
+                    alert("Success!");
+                }            
+
+            }
+
+            function validateText(input){
+                let text = input.value;
+                if (text == "" || !isNaN(text)) {
+                    input.className = "form-control is-invalid";
+                    input.focus();
+                    valid = false;
+                }
+            }
+
+            function validatePhone(){
+                if (phone.value == ''){
+                    phone.className = "form-control is-invalid";
+                    phone.focus();
+                    valid = false;
+                }
+            }
+
+            function validateCheckboxes(){
+                if (monday.checked || tuesday.checked || wednesday.checked || thursday.checked || friday.checked){
+                    //success
+                } else {
+                    //not valid
+                    label.className = "red";
+                    $(fail).show();
+                    valid = false;
+                }
+            }
+
+            function resetForm(){
+                name.className = "form-control";
+                email.className = "form-control";
+                phone.className = "form-control";
+                label.className = "";
+                $(fail).hide();
+                valid = true;
+            }
+        </script>
+        <noscript>
+            <div style="position: fixed; top:50%; width: 100%; background-color: red; color: white; text-align: center;">Javascript is not enabled. This site is best used with Javascript enabled.</div>
+        </noscript>
+    </body>
+</html>
